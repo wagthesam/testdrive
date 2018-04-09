@@ -24,3 +24,4 @@ COPY . /usr/src/app
 
 # run server
 CMD ["./entrypoint.sh"]
+
