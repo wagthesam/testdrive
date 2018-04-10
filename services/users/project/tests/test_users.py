@@ -157,8 +157,8 @@ class TestUserService(BaseTestCase):
     def test_main_with_users(self):
         """Ensure the main route behaves correctly when users have been
         added to the database."""
-        add_user('michael', 'michael@mherman.org','greaterthaneight')
-        add_user('fletcher', 'fletcher@notreal.com','greaterthaneight')
+        add_user('michael', 'michael@mherman.org', 'greaterthaneight')
+        add_user('fletcher', 'fletcher@notreal.com', 'greaterthaneight')
         with self.client:
             response = self.client.get('/')
             self.assertEqual(response.status_code, 200)
@@ -198,6 +198,7 @@ class TestUserService(BaseTestCase):
             self.assertEqual(response.status_code, 400)
             self.assertIn('Invalid payload.', data['message'])
             self.assertIn('fail', data['status'])
+
 
 if __name__ == '__main__':
     unittest.main()
