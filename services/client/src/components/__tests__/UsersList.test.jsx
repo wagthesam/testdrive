@@ -52,6 +52,7 @@ test('UsersList renders properly', () => {
   expect(td.get(4).props.children).toBe('false');
 });
 
+
 test('UsersList renders a snapshot properly', () => {
   const tree = renderer.create(<UsersList users={users}/>).toJSON();
   expect(tree).toMatchSnapshot();
