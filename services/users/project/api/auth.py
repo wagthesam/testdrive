@@ -51,7 +51,7 @@ def register_user():
         db.session.rollback()
         return jsonify(response_object), 400
 
-
+import logging
 @auth_blueprint.route('/auth/login', methods=['POST'])
 def login_user():
     # get post data
