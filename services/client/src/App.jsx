@@ -8,6 +8,7 @@ import About from './components/About';
 import NavBar from './components/NavBar';
 import Form from './components/Form';
 import Logout from './components/Logout';
+import UserStatus from './components/UserStatus';
 
 class App extends Component {
   constructor() {
@@ -31,7 +32,9 @@ class App extends Component {
     this.logoutUser = this.logoutUser.bind(this);
   };
   componentDidMount() {
-    this.getUsers();
+    if (this.props.isAuthenticated) {
+      this.getUserStatus();
+    }
   };
   logoutUser() {
     window.localStorage.clear();
@@ -94,6 +97,7 @@ class App extends Component {
       <div>
         <NavBar
           title={this.state.title}
+          isAuthenticated={this.state.isAuthenticated}
         />
         <div className="container">
           <div className="row">
@@ -136,6 +140,11 @@ class App extends Component {
                 <Route exact path='/logout' render={() => (
                   <Logout
                     logoutUser={this.logoutUser}
+                    isAuthenticated={this.state.isAuthenticated}
+                  />
+                )} />
+                <Route exact path='/status' render={() => (
+                  <UserStatus
                     isAuthenticated={this.state.isAuthenticated}
                   />
                 )} />

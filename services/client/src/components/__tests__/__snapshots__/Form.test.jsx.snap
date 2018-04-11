@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Login Form renders a snapshot properly 1`] = `
+exports[`When not authenticated Login Form renders a snapshot properly 1`] = `
 <div>
   <h1>
     Login
@@ -16,7 +16,7 @@ exports[`Login Form renders a snapshot properly 1`] = `
       <input
         className="form-control input-lg"
         name="email"
-        onChange={undefined}
+        onChange={[Function]}
         placeholder="Enter an email address"
         required={true}
         type="email"
@@ -29,7 +29,7 @@ exports[`Login Form renders a snapshot properly 1`] = `
       <input
         className="form-control input-lg"
         name="password"
-        onChange={undefined}
+        onChange={[Function]}
         placeholder="Enter a password"
         required={true}
         type="password"
@@ -45,52 +45,7 @@ exports[`Login Form renders a snapshot properly 1`] = `
 </div>
 `;
 
-exports[`Login Form renders a snapshot properly 2`] = `
-<div>
-  <h1>
-    Login
-  </h1>
-  <hr />
-  <br />
-  <form
-    onSubmit={[Function]}
-  >
-    <div
-      className="form-group"
-    >
-      <input
-        className="form-control input-lg"
-        name="email"
-        onChange={undefined}
-        placeholder="Enter an email address"
-        required={true}
-        type="email"
-        value=""
-      />
-    </div>
-    <div
-      className="form-group"
-    >
-      <input
-        className="form-control input-lg"
-        name="password"
-        onChange={undefined}
-        placeholder="Enter a password"
-        required={true}
-        type="password"
-        value=""
-      />
-    </div>
-    <input
-      className="btn btn-primary btn-lg btn-block"
-      type="submit"
-      value="Submit"
-    />
-  </form>
-</div>
-`;
-
-exports[`Register Form renders a snapshot properly 1`] = `
+exports[`When not authenticated Register Form renders a snapshot properly 1`] = `
 <div>
   <h1>
     Register
@@ -106,7 +61,7 @@ exports[`Register Form renders a snapshot properly 1`] = `
       <input
         className="form-control input-lg"
         name="username"
-        onChange={undefined}
+        onChange={[Function]}
         placeholder="Enter a username"
         required={true}
         type="text"
@@ -119,7 +74,7 @@ exports[`Register Form renders a snapshot properly 1`] = `
       <input
         className="form-control input-lg"
         name="email"
-        onChange={undefined}
+        onChange={[Function]}
         placeholder="Enter an email address"
         required={true}
         type="email"
@@ -132,65 +87,7 @@ exports[`Register Form renders a snapshot properly 1`] = `
       <input
         className="form-control input-lg"
         name="password"
-        onChange={undefined}
-        placeholder="Enter a password"
-        required={true}
-        type="password"
-        value=""
-      />
-    </div>
-    <input
-      className="btn btn-primary btn-lg btn-block"
-      type="submit"
-      value="Submit"
-    />
-  </form>
-</div>
-`;
-
-exports[`Register Form renders a snapshot properly 2`] = `
-<div>
-  <h1>
-    Register
-  </h1>
-  <hr />
-  <br />
-  <form
-    onSubmit={[Function]}
-  >
-    <div
-      className="form-group"
-    >
-      <input
-        className="form-control input-lg"
-        name="username"
-        onChange={undefined}
-        placeholder="Enter a username"
-        required={true}
-        type="text"
-        value=""
-      />
-    </div>
-    <div
-      className="form-group"
-    >
-      <input
-        className="form-control input-lg"
-        name="email"
-        onChange={undefined}
-        placeholder="Enter an email address"
-        required={true}
-        type="email"
-        value=""
-      />
-    </div>
-    <div
-      className="form-group"
-    >
-      <input
-        className="form-control input-lg"
-        name="password"
-        onChange={undefined}
+        onChange={[Function]}
         placeholder="Enter a password"
         required={true}
         type="password"
