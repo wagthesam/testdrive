@@ -46,3 +46,4 @@ then
     docker push $REPO/$SWAGGER:$TAG
   fi
 fi
+
