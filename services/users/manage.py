@@ -8,6 +8,7 @@ from flask.cli import FlaskGroup
 from project import create_app, db
 from project.api.models import User
 import coverage
+from project.tests.utils import add_user
 
 
 COV = coverage.coverage(
@@ -43,16 +44,12 @@ def test():
 @cli.command()
 def seed_db():
     """Seeds the database."""
-    db.session.add(User(
-        username='michael',
-        email='michael@reallynotreal.com',
-        password='greaterthaneight'
-    ))
-    db.session.add(User(
-        username='michaelherman',
-        email='michael@mherman.org',
-        password='greaterthaneight'
-    ))
+    add_user('michael',
+             'michael@reallynotreal.com',
+              'greaterthaneight')
+    add_user('michaelherman',
+             'michael@mherman.com',
+              'greaterthaneight')
     db.session.commit()
 
 @cli.command()
